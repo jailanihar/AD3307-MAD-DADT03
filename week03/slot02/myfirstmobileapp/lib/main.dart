@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page Jailani'),
-      home: const MyFirstPage(),
+      // home: const MyFirstPage(),
+      home: const MySecondPage(),
     );
   }
 }
@@ -57,6 +60,57 @@ class MyFirstPage extends StatelessWidget {
     //     fontWeight: FontWeight.bold,
     //   ),
     // );
+  }
+}
+
+class MySecondPage extends StatefulWidget {
+  const MySecondPage({super.key});
+
+  @override
+  State<MySecondPage> createState() => _MySecondPageState();
+}
+
+class _MySecondPageState extends State<MySecondPage> {
+  final List<String> names = [
+    'Abu', 'Bakar', 'Curi', 'Daging', 'Emak', 'Fatimah', 'Geli', 'Hati'
+  ];
+
+  int selectedNameIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'My Second Page',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Aku mau namaku masa ani, ${names[selectedNameIndex]}'
+            ),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  selectedNameIndex = Random().nextInt(names.length);
+                });
+              },
+              child: const Text('Tukar namaku'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
