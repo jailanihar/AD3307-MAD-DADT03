@@ -1,6 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:myfirstmobileapp/pages/my_first_page.dart';
+import 'package:myfirstmobileapp/pages/my_second_page.dart';
+import 'package:myfirstmobileapp/pages/my_third_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,96 +21,7 @@ class MyApp extends StatelessWidget {
       // home: const MyHomePage(title: 'Flutter Demo Home Page Jailani'),
       // home: const MyFirstPage(),
       home: const MySecondPage(),
-    );
-  }
-}
-
-class MyFirstPage extends StatelessWidget {
-  const MyFirstPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'My First Page',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.blue,
-      ),
-      body: Column(
-        children: [
-          const Text('This is page body'),
-          ElevatedButton(
-            onPressed: () {},
-            child: const Text('Click Me'),
-          ),
-        ],
-      ),
-    );
-    // return Text(
-    //   'Hello, this is my first page!',
-    //   style: TextStyle(
-    //     color: Colors.cyan,
-    //     fontSize: 24,
-    //     fontWeight: FontWeight.bold,
-    //   ),
-    // );
-  }
-}
-
-class MySecondPage extends StatefulWidget {
-  const MySecondPage({super.key});
-
-  @override
-  State<MySecondPage> createState() => _MySecondPageState();
-}
-
-class _MySecondPageState extends State<MySecondPage> {
-  final List<String> names = [
-    'Abu', 'Bakar', 'Curi', 'Daging', 'Emak', 'Fatimah', 'Geli', 'Hati'
-  ];
-
-  int selectedNameIndex = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'My Second Page',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.blue,
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Aku mau namaku masa ani, ${names[selectedNameIndex]}'
-            ),
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  selectedNameIndex = Random().nextInt(names.length);
-                });
-              },
-              child: const Text('Tukar namaku'),
-            ),
-          ],
-        ),
-      ),
+      // home: const MyThirdPage(),
     );
   }
 }
