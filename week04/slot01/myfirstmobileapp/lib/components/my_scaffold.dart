@@ -25,7 +25,51 @@ class MyScaffold extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.limeAccent,
       ),
-      body: body,
+      body: Center(
+        child: ListView(
+          children: [
+            if(Navigator.canPop(context))
+              ElevatedButton(
+                onPressed: () {
+                  if(Navigator.canPop(context)) {
+                    Navigator.pop(context);
+                    // Navigator.of(context).pop();
+                  }
+                },
+                child: const Icon(Icons.arrow_back),
+              ),
+            body,
+          ],
+        )
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.lightGreenAccent,
+        child: ListView(
+          children: [
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: const Text('First Page'),
+              onTap: () {
+                Navigator.of(context).pushNamed('/myfirstpage');
+              }
+            ),
+            ListTile(
+              leading: const Icon(Icons.person_2),
+              title: const Text('Second Page'),
+              onTap: () {
+                Navigator.of(context).pushNamed('/mysecondpage');
+              }
+            ),
+            ListTile(
+              leading: const Icon(Icons.person_3),
+              title: const Text('Third Page'),
+              onTap: () {
+                Navigator.of(context).pushNamed('/mythirdpage');
+              }
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
