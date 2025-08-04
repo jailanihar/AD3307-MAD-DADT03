@@ -8,7 +8,22 @@ class MyThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MyScaffold(
       title: 'My Third Page',
-      body: const Text('This is the body of third page'),
+      body: Column(
+        children: [
+          const Text('This is the body of third page'),
+          ElevatedButton(
+              onPressed: () {
+                // Navigator.of(context).pushReplacementNamed('/myhomepage');
+                Navigator.of(context)
+                  .pushNamedAndRemoveUntil(
+                    '/myhomepage',
+                    (Route<dynamic> route) => false
+                  );
+              },
+              child: const Text('Go To Home Page'),
+            ),
+        ],
+      ),
     );
   }
 }

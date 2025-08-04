@@ -12,8 +12,10 @@ class MyFirstPage extends StatelessWidget {
         children: [
           const Text('This is page body'),
           ElevatedButton(
-            onPressed: () {},
-            child: const Text('Click Me'),
+            onPressed: () {
+              Navigator.of(context).pushNamed('/mysecondpage');
+            },
+            child: const Text('Go To Second Page'),
           ),
         ],
       ),

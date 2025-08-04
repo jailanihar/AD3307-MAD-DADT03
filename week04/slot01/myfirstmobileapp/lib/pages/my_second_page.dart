@@ -35,6 +35,12 @@ class _MySecondPageState extends State<MySecondPage> {
               },
               child: const Text('Tukar namaku'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/mythirdpage');
+              },
+              child: const Text('Go To Third Page'),
+            ),
           ],
         ),
       ),

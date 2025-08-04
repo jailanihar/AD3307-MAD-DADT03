@@ -18,10 +18,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page Jailani'),
-      // home: const MyFirstPage(),
-      home: const MySecondPage(),
-      // home: const MyThirdPage(),
+      initialRoute: '/myfirstpage',
+      routes: {
+        '/myfirstpage': (context) => const MyFirstPage(),
+        '/mysecondpage': (context) => const MySecondPage(),
+        '/mythirdpage': (context) => const MyThirdPage(),
+        '/myhomepage': (context) => const MyHomePage(title: 'Home'),
+      },
     );
   }
 }
