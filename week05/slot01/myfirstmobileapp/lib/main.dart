@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myfirstmobileapp/pages/login.dart';
 import 'package:myfirstmobileapp/pages/my_first_page.dart';
 import 'package:myfirstmobileapp/pages/my_second_page.dart';
 import 'package:myfirstmobileapp/pages/my_third_page.dart';
@@ -18,8 +19,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
-      initialRoute: '/myfirstpage',
+      initialRoute: '/loginpage',
       routes: {
+        '/loginpage': (context) => const LoginPage(),
         '/myfirstpage': (context) => const MyFirstPage(),
         '/mysecondpage': (context) => const MySecondPage(),
         '/mythirdpage': (context) => const MyThirdPage(),
