@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1019022292458",
+    "firebase_url": "https://mengajarfirebase-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mengajarfirebase",
+    "storage_bucket": "mengajarfirebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019022292458:android:66e6f3650a9a4ee45eae93",
+        "android_client_info": {
+          "package_name": "com.example.myfirstmobileapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6QQmMWqTRYV4Na6IGe9MXqBzVyXMy-mU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
