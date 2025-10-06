@@ -1,0 +1,10 @@
+{
+    "loginPage": "Halaman Log Masuk",
+    "email": "E-mel",
+    "password": "Kata Laluan",
+    "loginButton": "Log Masuk",
+    "showPasswordSwitch": "Liatkan Kata Laluan",
+    "myFirstPage": "Halaman Pertama Saya",
+    "myFirstPageBody": "Ini adalah kandungan halaman",
+    "goToSecondPageButton": "Pergi ke Halaman Kedua"
+}

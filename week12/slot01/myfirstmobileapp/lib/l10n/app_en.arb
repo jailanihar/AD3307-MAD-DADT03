@@ -1,0 +1,10 @@
+{
+    "loginPage": "Login Page",
+    "email": "Email",
+    "password": "Password",
+    "loginButton": "Login",
+    "showPasswordSwitch": "Show Password",
+    "myFirstPage": "My First Page",
+    "myFirstPageBody": "This is page body",
+    "goToSecondPageButton": "Go To Second Page"
+}

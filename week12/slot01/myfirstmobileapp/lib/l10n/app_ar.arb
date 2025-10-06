@@ -1,0 +1,10 @@
+{
+    "loginPage": "صفحة تسجيل الدخول",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "loginButton": "تسجيل الدخول",
+    "showPasswordSwitch": "إظهار كلمة المرور",
+    "myFirstPage": "صفحتي الأولى",
+    "myFirstPageBody": "هذا هو محتوى الصفحة",
+    "goToSecondPageButton": "اذهب إلى الصفحة الثانية"
+}
